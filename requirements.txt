@@ -1,0 +1,6 @@
+attrs
+cattrs
+jupyterlab
+mypy
+pyyaml
+import-ipynb

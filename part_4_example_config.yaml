@@ -1,0 +1,18 @@
+sources:
+- name: cert-manager
+  type: chart
+  repo: https://charts.jetstack.io
+  version: "0.9.1"
+  releasevars:
+    name: cert-manager
+  templatevars:
+    foo: bar
+- name: "00-crds.yaml"
+  type: manifest
+  url: https://raw.githubusercontent.com/jetstack/cert-manager/v0.9.1/deploy/manifests/00-crds.yaml
+- name: argo-cd
+  type: archive
+  url: https://github.com/argoproj/argo-cd/archive/v1.2.1.tar.gz
+  paths:
+  - {"path": "*/manifests/**", "dest": "manifests"}
+  - {"path": "*/examples/dashboard.json", "dest": "dashboard.json"}
