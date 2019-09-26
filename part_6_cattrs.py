@@ -2,7 +2,7 @@ import cattr
 import yaml
 
 import import_ipynb
-from part_4b_nested_config_validated import Config
+from part_4_nested_config import Config
 
 def parse_config():
     cfg = yaml.safe_load(open("part_4_example_config.yaml"))
@@ -13,7 +13,7 @@ parse_config()
 #########
 # hooks
 
-from part_4b_nested_config_validated import SOURCE_MAP
+from part_4_nested_config import SOURCE_MAP, Source
 
 def structure_source(src, _type):
     cls = SOURCE_MAP[src.pop("type")]
